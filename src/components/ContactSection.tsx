@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, ArrowUpRight, Instagram, Facebook } from "lucide-react";
+import { Mail, ArrowUpRight, Instagram, Facebook, Globe } from "lucide-react";
+
+const EMAIL = "Lartiska2@gmail.com";
+const MAIL_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=Contact%20depuis%20le%20portfolio`;
+const LARTISKA_SITE = "https://lartiska.onrender.com";
 
 const WhatsAppIcon = ({ size = 15 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -15,8 +19,9 @@ const TikTokIcon = ({ size = 15 }: { size?: number }) => (
 );
 
 const socials = [
-  { label: "Email", href: "mailto:Lartiska2@gmail.com", icon: Mail },
+  { label: "Email", href: MAIL_URL, icon: Mail },
   { label: "WhatsApp", href: "https://wa.me/221785446363", icon: WhatsAppIcon },
+  { label: "Site LARTISKA", href: LARTISKA_SITE, icon: Globe },
   { label: "Instagram", href: "https://instagram.com/lartiska", icon: Instagram },
   { label: "Facebook", href: "https://facebook.com/lartiska", icon: Facebook },
   { label: "TikTok", href: "https://tiktok.com/@lartiska", icon: TikTokIcon },
@@ -25,7 +30,6 @@ const socials = [
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const email = "Lartiska2@gmail.com";
 
   return (
     <section id="contact" ref={ref} className="bg-bg pt-28 md:pt-40 pb-16 md:pb-20 px-6 overflow-hidden relative">
@@ -43,20 +47,29 @@ const ContactSection = () => {
           <br />ensemble.
         </motion.h2>
 
-        <motion.a href={`mailto:${email}`} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+        <motion.a href={MAIL_URL} target="_blank" rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.25 }} whileHover={{ scale: 1.03 }}
           className="group relative bg-surface border border-stroke rounded-full pl-6 pr-2 py-2 flex items-center gap-3 overflow-hidden transition-all duration-300">
           <span className="absolute inset-[-1.5px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"
             style={{ background: "linear-gradient(90deg, #89AACC, #4E85BF)" }} aria-hidden />
           <span className="absolute inset-0 rounded-full bg-surface -z-0" aria-hidden />
           <Mail size={18} className="text-white/80 relative z-10" />
-          <span className="text-white text-sm md:text-base relative z-10 font-medium">{email}</span>
+          <span className="text-white text-sm md:text-base relative z-10 font-medium">{EMAIL}</span>
           <span className="bg-white rounded-full p-2.5 text-black relative z-10 group-hover:rotate-45 transition-transform duration-300">
             <ArrowUpRight size={16} />
           </span>
         </motion.a>
 
-        <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }}
+        <motion.a href={LARTISKA_SITE} target="_blank" rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.3 }} whileHover={{ scale: 1.03 }}
+          className="inline-flex items-center gap-2 text-sm text-white/85 hover:text-white font-medium transition-colors">
+          <Globe size={15} />
+          Visitez le site officiel <span className="font-serif-i italic">LARTISKA</span> ↗
+        </motion.a>
+
+        <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.35 }}
           className="flex flex-wrap items-center justify-center gap-3 text-white/80 text-sm font-medium">
           <span>📞 +221 78 544 63 63</span>
           <span className="w-1 h-1 rounded-full bg-stroke" />

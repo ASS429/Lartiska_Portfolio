@@ -432,9 +432,10 @@ const CV = () => {
           <div className="cv-contact-card">
             <div className="cv-contact">
               <span><b>Localité</b>Dakar / Sénégal</span>
-              <a href="mailto:Lartiska2@gmail.com"><b>Email</b>Lartiska2@gmail.com</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Lartiska2@gmail.com&su=Contact%20depuis%20le%20CV" target="_blank" rel="noreferrer"><b>Email</b>Lartiska2@gmail.com</a>
               <span><b>Téléphone</b>+221 78 544 63 63</span>
               <a href="https://wa.me/221785446363" target="_blank" rel="noreferrer"><b>WhatsApp</b>wa.me/221785446363</a>
+              <a href="https://lartiska.onrender.com" target="_blank" rel="noreferrer"><b>Site</b>lartiska.onrender.com</a>
               <span><b>Réseaux</b>Instagram · Facebook · TikTok : LARTISKA</span>
             </div>
           </div>

@@ -18,10 +18,14 @@ const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const ROLES = ["Artiste peintre", "Décorateur", "Créatif", "Entrepreneur"];
+const EMAIL = "Lartiska2@gmail.com";
+const MAIL_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=Contact%20depuis%20le%20portfolio`;
+const LARTISKA_SITE = "https://lartiska.onrender.com";
 const NAV_LINKS = [
   { label: "Accueil", href: "#" },
   { label: "Projets", href: "#projects" },
   { label: "CV", href: "/cv" },
+  { label: "LARTISKA ↗", href: LARTISKA_SITE },
 ];
 
 const Index = () => {
@@ -117,12 +121,18 @@ const Index = () => {
                 const className = "text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-colors duration-200 " +
                   (activeNav === link.label ? "text-white bg-stroke/50" : "text-muted hover:text-white hover:bg-stroke/50");
                 const isRoute = link.href.startsWith("/");
-                return isRoute ? (
-                  <Link key={link.label} to={link.href} onClick={() => setActiveNav(link.label)} className={className}>
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a key={link.label} href={link.href} onClick={() => setActiveNav(link.label)} className={className}>
+                const isExternal = link.href.startsWith("http");
+                if (isRoute) {
+                  return (
+                    <Link key={link.label} to={link.href} onClick={() => setActiveNav(link.label)} className={className}>
+                      {link.label}
+                    </Link>
+                  );
+                }
+                return (
+                  <a key={link.label} href={link.href}
+                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    onClick={() => setActiveNav(link.label)} className={className}>
                     {link.label}
                   </a>
                 );
@@ -130,7 +140,7 @@ const Index = () => {
 
               <div className="w-px h-5 bg-stroke mx-2 hidden sm:block" />
 
-              <a href="mailto:Lartiska2@gmail.com" className="relative group rounded-full text-xs sm:text-sm overflow-hidden">
+              <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" className="relative group rounded-full text-xs sm:text-sm overflow-hidden">
                 <span className="absolute inset-[-2px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(90deg, #89AACC, #4E85BF)" }} aria-hidden />
                 <span className="relative z-10 flex items-center gap-1 bg-surface rounded-full px-3 py-1.5 text-white">
                   Dire bonjour ↗
@@ -177,7 +187,7 @@ const Index = () => {
             </div>
 
             <div className="blur-in flex items-center gap-3 mt-2" style={{ opacity: 0 }}>
-              <a href="mailto:Lartiska2@gmail.com" aria-label="Email"
+              <a href={MAIL_URL} target="_blank" rel="noopener noreferrer" aria-label="Email"
                 className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 hover:border-white">
                 <Mail size={18} strokeWidth={2.25} />
               </a>
@@ -185,7 +195,7 @@ const Index = () => {
                 className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-110 hover:border-[#25D366]">
                 <WhatsAppIcon size={18} />
               </a>
-              <a href="#about" aria-label="À propos"
+              <a href={LARTISKA_SITE} target="_blank" rel="noopener noreferrer" aria-label="Site LARTISKA"
                 className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 hover:border-white">
                 <Globe size={18} strokeWidth={2.25} />
               </a>
