@@ -1,3 +1,5 @@
+import ahmadouPortrait from "../assets/arfang-portrait.jpeg";
+
 const loadHtml2Pdf = () => {
   return new Promise<any>((resolve, reject) => {
     if ((window as any).html2pdf) {
@@ -40,6 +42,17 @@ const handleDownload = async () => {
     if ("fonts" in document) {
       await (document as any).fonts.ready;
     }
+
+    const images = Array.from(clone.querySelectorAll("img"));
+    await Promise.all(
+      images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise<void>((resolve) => {
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+        });
+      })
+    );
 
     await new Promise((resolve) => requestAnimationFrame(resolve));
 
@@ -168,17 +181,38 @@ const CV = () => {
 
         .cv-header {
           display: grid;
-          grid-template-columns: 1fr 64mm;
-          gap: 7mm;
-          align-items: end;
+          grid-template-columns: 25mm 1fr 64mm;
+          gap: 4.8mm;
+          align-items: center;
           padding-bottom: 4.2mm;
           border-bottom: 1px solid var(--line);
+        }
+
+        .cv-photo {
+          width: 25mm;
+          height: 25mm;
+          border-radius: 7mm;
+          padding: 1.1mm;
+          background: linear-gradient(135deg, var(--accent-dark), var(--accent), #d0a15b);
+          box-shadow: 0 8px 22px rgba(86, 56, 25, 0.18);
+          overflow: hidden;
+          flex: 0 0 auto;
+        }
+
+        .cv-photo img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 5.7mm;
+          background: #ffffff;
         }
 
         .cv-name {
           margin: 0;
           color: var(--ink);
-          font-size: 22.8pt;
+          font-size: 21.5pt;
           line-height: 0.95;
           font-weight: 800;
           letter-spacing: -0.85px;
@@ -424,6 +458,10 @@ const CV = () => {
         <div className="cv-topbar" />
 
         <header className="cv-header">
+          <div className="cv-photo">
+            <img src={ahmadouPortrait} alt="Portrait de Ahmadou Moustapha Tounkara" />
+          </div>
+
           <div>
             <h1 className="cv-name">Ahmadou Moustapha Tounkara</h1>
             <div className="cv-title">Maître Artisan · Finition Luxe</div>
@@ -432,10 +470,9 @@ const CV = () => {
           <div className="cv-contact-card">
             <div className="cv-contact">
               <span><b>Localité</b>Dakar / Sénégal</span>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Lartiska2@gmail.com&su=Contact%20depuis%20le%20CV" target="_blank" rel="noreferrer"><b>Email</b>Lartiska2@gmail.com</a>
+              <a href="mailto:Lartiska2@gmail.com"><b>Email</b>Lartiska2@gmail.com</a>
               <span><b>Téléphone</b>+221 78 544 63 63</span>
               <a href="https://wa.me/221785446363" target="_blank" rel="noreferrer"><b>WhatsApp</b>wa.me/221785446363</a>
-              <a href="https://lartiska.onrender.com" target="_blank" rel="noreferrer"><b>Site</b>lartiska.onrender.com</a>
               <span><b>Réseaux</b>Instagram · Facebook · TikTok : LARTISKA</span>
             </div>
           </div>
