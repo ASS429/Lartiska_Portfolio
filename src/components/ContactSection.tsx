@@ -49,15 +49,15 @@ const ContactSection = () => {
           <span className="absolute inset-[-1.5px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"
             style={{ background: "linear-gradient(90deg, #89AACC, #4E85BF)" }} aria-hidden />
           <span className="absolute inset-0 rounded-full bg-surface -z-0" aria-hidden />
-          <Mail size={18} className="text-muted relative z-10" />
-          <span className="text-white text-sm md:text-base relative z-10">{email}</span>
+          <Mail size={18} className="text-white/80 relative z-10" />
+          <span className="text-white text-sm md:text-base relative z-10 font-medium">{email}</span>
           <span className="bg-white rounded-full p-2.5 text-black relative z-10 group-hover:rotate-45 transition-transform duration-300">
             <ArrowUpRight size={16} />
           </span>
         </motion.a>
 
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-wrap items-center justify-center gap-3 text-muted text-sm">
+          className="flex flex-wrap items-center justify-center gap-3 text-white/80 text-sm font-medium">
           <span>📞 +221 78 544 63 63</span>
           <span className="w-1 h-1 rounded-full bg-stroke" />
           <span>Dakar / Sénégal</span>
@@ -80,10 +80,10 @@ const ContactSection = () => {
 
           <div className="flex items-center gap-2 bg-surface border border-stroke rounded-full px-4 py-2">
             <span className="w-2 h-2 rounded-full bg-green-400" style={{ boxShadow: "0 0 6px #4ade80" }} />
-            <span className="text-white/70 text-xs tracking-wider">Disponible pour des projets</span>
+            <span className="text-white/85 text-xs tracking-wider font-semibold">Disponible pour des projets</span>
           </div>
 
-          <p className="text-muted text-xs tracking-widest uppercase">
+          <p className="text-white/70 text-xs tracking-widest uppercase font-semibold">
             © {new Date().getFullYear()} LARTISKA — A. M. Tounkara
           </p>
         </motion.div>

@@ -149,7 +149,7 @@ const Index = () => {
               Ahmadou Tounkara
             </h1>
 
-            <p className="blur-in text-sm md:text-base text-white/60" style={{ opacity: 0 }}>
+            <p className="blur-in text-sm md:text-base text-white/85 font-medium" style={{ opacity: 0 }}>
               Un{" "}
               <AnimatePresence mode="wait">
                 <motion.span key={roleIndex} className="font-serif-i italic text-white inline-block"
@@ -160,7 +160,7 @@ const Index = () => {
               {" "}basé à Dakar, Sénégal.
             </p>
 
-            <p className="blur-in text-sm md:text-base text-white/50 max-w-md" style={{ opacity: 0 }}>
+            <p className="blur-in text-sm md:text-base text-white/75 font-medium max-w-md" style={{ opacity: 0 }}>
               Fondateur de LARTISKA. Je transforme les espaces en œuvres d'art à travers
               la peinture décorative, le carrelage design et le plafonnage moderne.
             </p>

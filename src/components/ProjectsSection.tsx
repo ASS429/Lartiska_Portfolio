@@ -27,7 +27,7 @@ const ProjectsSection = () => {
             Quelques <span className="font-serif-i italic text-muted">œuvres</span>
             <br />à travers l'Afrique de l'Ouest.
           </h2>
-          <p className="mt-6 text-muted text-base md:text-lg leading-relaxed">
+          <p className="mt-6 text-white/85 text-base md:text-lg leading-relaxed font-medium">
             Sélection de réalisations LARTISKA — fresques, plafonds, mosaïques, design d'intérieur.
             Cliquez sur un projet pour découvrir la galerie complète.
           </p>
@@ -97,9 +97,9 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     <div className="p-5 border-t border-stroke">
-                      <p className="text-xs uppercase tracking-widest text-muted/80">{categoryName}</p>
+                      <p className="text-xs uppercase tracking-widest text-white/65 font-semibold">{categoryName}</p>
                       <h3 className="font-serif-i italic text-xl md:text-2xl mt-2 leading-snug text-white">{p.title}</h3>
-                      <p className="text-muted text-sm mt-1">{p.city}</p>
+                      <p className="text-white/70 text-sm mt-1 font-medium">{p.city}</p>
                     </div>
                   </Link>
                 </motion.div>

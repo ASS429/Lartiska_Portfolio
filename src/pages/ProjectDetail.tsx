@@ -61,7 +61,7 @@ const ProjectDetail = () => {
           <h1 className="text-4xl md:text-6xl tracking-tight leading-[1.05]">
             <span className="font-serif-i italic">{project.title}</span>
           </h1>
-          <p className="mt-6 text-muted text-base md:text-lg leading-relaxed">{project.description}</p>
+          <p className="mt-6 text-white/85 text-base md:text-lg leading-relaxed font-medium">{project.description}</p>
         </motion.header>
 
         <motion.figure
@@ -82,7 +82,7 @@ const ProjectDetail = () => {
             { label: "Livré", value: project.completed_at },
           ].map((item) => (
             <div key={item.label} className="border-l-2 border-white/20 pl-4">
-              <dt className="text-xs uppercase tracking-widest text-muted mb-1">{item.label}</dt>
+              <dt className="text-xs uppercase tracking-widest text-white/70 font-semibold mb-1">{item.label}</dt>
               <dd className="font-serif-i italic text-lg text-white">{item.value}</dd>
             </div>
           ))}

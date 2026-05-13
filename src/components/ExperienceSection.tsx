@@ -20,7 +20,7 @@ const ExperienceSection = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}
           className="bg-surface border border-stroke rounded-3xl p-8 md:p-12 relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, #89AACC40, transparent)" }} />
-          <p className="text-muted text-base md:text-lg leading-relaxed">
+          <p className="text-white/85 text-base md:text-lg leading-relaxed font-medium">
             Je développe mon savoir-faire à travers des{" "}
             <span className="font-serif-i italic text-white">réalisations concrètes</span> et des
             projets artistiques variés, en perfectionnant continuellement mes techniques, ma{" "}

@@ -49,8 +49,8 @@ const PersonalSection = () => {
                 <motion.div key={l.name} initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
                   className="flex items-center justify-between py-2 border-b border-stroke last:border-0">
-                  <span className="text-white text-base md:text-lg">{l.name}</span>
-                  <span className="text-muted text-sm tracking-wider uppercase">{l.level}</span>
+                  <span className="text-white text-base md:text-lg font-medium">{l.name}</span>
+                  <span className="text-white/75 text-sm tracking-wider uppercase font-semibold">{l.level}</span>
                 </motion.div>
               ))}
             </div>
@@ -74,8 +74,8 @@ const PersonalSection = () => {
                   <motion.div key={it.name} initial={{ opacity: 0, scale: 0.9 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                     className="bg-bg border border-stroke rounded-2xl px-4 py-3 flex items-center gap-3 hover:border-[#89AACC]/40 transition-colors">
-                    <Icon size={18} className="text-muted" />
-                    <span className="text-white text-sm md:text-base">{it.name}</span>
+                    <Icon size={18} className="text-white/80" />
+                    <span className="text-white text-sm md:text-base font-medium">{it.name}</span>
                   </motion.div>
                 );
               })}

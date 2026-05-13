@@ -70,11 +70,11 @@ const SkillsSection = () => {
                   </div>
                   <p className="text-muted text-xs tracking-widest uppercase">{s.tag}</p>
                 </div>
-                <h3 className="text-white text-xl md:text-2xl mb-3 tracking-tight">{s.title}</h3>
-                <p className="text-muted text-sm leading-relaxed mb-5">{s.description}</p>
+                <h3 className="text-white text-xl md:text-2xl mb-3 tracking-tight font-semibold">{s.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-5 font-medium">{s.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {s.tags.map((t) => (
-                    <span key={t} className="border border-stroke rounded-full px-3 py-1 text-muted text-xs tracking-wide hover:border-[#89AACC]/50 hover:text-white/80 transition-colors">{t}</span>
+                    <span key={t} className="border border-stroke rounded-full px-3 py-1 text-white/75 text-xs tracking-wide font-medium hover:border-[#89AACC]/50 hover:text-white transition-colors">{t}</span>
                   ))}
                 </div>
               </motion.div>

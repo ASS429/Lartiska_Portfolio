@@ -9,12 +9,12 @@
     --bg: 0 0% 4%;
     --surface: 0 0% 8%;
     --text: 0 0% 96%;
-    --muted: 0 0% 53%;
-    --stroke: 0 0% 12%;
+    --muted: 0 0% 68%;
+    --stroke: 0 0% 14%;
     --accent: 0 0% 96%;
     --background: 0 0% 4%;
     --foreground: 0 0% 96%;
-    --border: 0 0% 12%;
+    --border: 0 0% 14%;
     --radius: 0.5rem;
   }
 
@@ -26,7 +26,9 @@
     background-color: hsl(var(--bg));
     color: hsl(var(--text));
     font-family: 'Inter', sans-serif;
+    font-weight: 450;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 

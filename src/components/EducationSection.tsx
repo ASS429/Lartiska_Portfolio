@@ -27,10 +27,10 @@ const EducationSection = () => {
             <motion.div key={e.school + e.degree} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * (i + 1) }}
               className="grid grid-cols-12 gap-4 py-6 md:py-8 border-t border-stroke last:border-b group hover:bg-surface/40 transition-colors px-4 -mx-4 rounded-2xl">
-              <p className="col-span-12 md:col-span-3 text-muted text-sm tracking-wider">{e.dates}</p>
+              <p className="col-span-12 md:col-span-3 text-white/75 text-sm tracking-wider font-semibold">{e.dates}</p>
               <div className="col-span-12 md:col-span-9">
-                <h3 className="text-white text-xl md:text-2xl tracking-tight mb-1 group-hover:text-white transition-colors">{e.school}</h3>
-                <p className="text-muted text-sm md:text-base">{e.degree}</p>
+                <h3 className="text-white text-xl md:text-2xl tracking-tight mb-1 group-hover:text-white transition-colors font-semibold">{e.school}</h3>
+                <p className="text-white/80 text-sm md:text-base font-medium">{e.degree}</p>
               </div>
             </motion.div>
           ))}
