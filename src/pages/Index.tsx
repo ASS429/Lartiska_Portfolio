@@ -145,8 +145,8 @@ const Index = () => {
               LARTISKA · COLLECTION '26
             </p>
 
-            <h1 className="name-reveal text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif-i italic leading-[0.9] tracking-tight text-white" style={{ opacity: 0 }}>
-              Ahmadou Tounkara
+            <h1 className="name-reveal text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif-i italic leading-[0.9] tracking-tight text-white" style={{ opacity: 0 }}>
+              Ahmadou Moustapha Tounkara
             </h1>
 
             <p className="blur-in text-sm md:text-base text-white/85 font-medium" style={{ opacity: 0 }}>
@@ -177,9 +177,18 @@ const Index = () => {
             </div>
 
             <div className="blur-in flex items-center gap-3 mt-2" style={{ opacity: 0 }}>
-              <a href="mailto:Lartiska2@gmail.com" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="Email"><Mail size={16} /></a>
-              <a href="https://wa.me/221785446363" target="_blank" rel="noopener noreferrer" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="WhatsApp"><WhatsAppIcon size={16} /></a>
-              <a href="#about" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="À propos"><Globe size={16} /></a>
+              <a href="mailto:Lartiska2@gmail.com" aria-label="Email"
+                className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 hover:border-white">
+                <Mail size={18} strokeWidth={2.25} />
+              </a>
+              <a href="https://wa.me/221785446363" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+                className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-110 hover:border-[#25D366]">
+                <WhatsAppIcon size={18} />
+              </a>
+              <a href="#about" aria-label="À propos"
+                className="rounded-full p-3 bg-white/10 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/30 transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 hover:border-white">
+                <Globe size={18} strokeWidth={2.25} />
+              </a>
             </div>
           </div>
 

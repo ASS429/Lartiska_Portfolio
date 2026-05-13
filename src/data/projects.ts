@@ -55,7 +55,7 @@ const rawProjects: Project[] = [
     duration: "3 semaines",
     completed_at: "Septembre 2025",
     featured: true,
-    imageCount: 5,
+    imageCount: 6,
   },
   {
     slug: "mosaique-hotel-faidherbe",
@@ -83,7 +83,7 @@ const rawProjects: Project[] = [
     duration: "2 semaines",
     completed_at: "Juin 2025",
     featured: false,
-    imageCount: 6,
+    imageCount: 5,
   },
   {
     slug: "salon-majlis-concept-complet",
@@ -97,7 +97,7 @@ const rawProjects: Project[] = [
     duration: "6 semaines",
     completed_at: "Avril 2025",
     featured: true,
-    imageCount: 6,
+    imageCount: 5,
   },
   {
     slug: "hammam-prive-villa-du-cap",
@@ -111,7 +111,7 @@ const rawProjects: Project[] = [
     duration: "4 semaines",
     completed_at: "Février 2025",
     featured: false,
-    imageCount: 5,
+    imageCount: 6,
   },
   {
     slug: "facade-artistique-banjul",

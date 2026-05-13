@@ -159,7 +159,7 @@ const CV = () => {
       <div className="cv-page">
         {/* Header */}
         <div className="cv-name">Ahmadou Moustapha Tounkara</div>
-        <div className="cv-title">Artiste Peintre · Décorateur Moderne · Fondateur de LARTISKA</div>
+        <div className="cv-title">Maître Artisan · Finition Luxe</div>
         <div className="cv-contact">
           <span>Dakar / Sénégal</span>
           <a href="mailto:Lartiska2@gmail.com">Lartiska2@gmail.com</a>
