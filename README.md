@@ -4,7 +4,7 @@ Portfolio personnel de **Ahmadou Moustapha Tounkara**, artiste peintre sénégal
 
 🌍 Basé à Dakar, Sénégal
 📞 +221 78 544 63 63
-📧 contact@lartiska.com
+📧 Lartiska2@gmail.com
 📱 Instagram · Facebook · TikTok : **LARTISKA**
 
 ## Stack technique

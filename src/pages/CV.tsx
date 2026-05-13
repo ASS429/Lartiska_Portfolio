@@ -162,7 +162,7 @@ const CV = () => {
         <div className="cv-title">Artiste Peintre · Décorateur Moderne · Fondateur de LARTISKA</div>
         <div className="cv-contact">
           <span>Dakar / Sénégal</span>
-          <a href="mailto:contact@lartiska.com">contact@lartiska.com</a>
+          <a href="mailto:Lartiska2@gmail.com">Lartiska2@gmail.com</a>
           <span>+221 78 544 63 63</span>
           <a href="https://wa.me/221785446363" target="_blank" rel="noreferrer">wa.me/221785446363</a>
           <span>Instagram · Facebook · TikTok : LARTISKA</span>

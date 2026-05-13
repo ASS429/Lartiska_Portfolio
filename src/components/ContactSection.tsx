@@ -15,7 +15,7 @@ const TikTokIcon = ({ size = 15 }: { size?: number }) => (
 );
 
 const socials = [
-  { label: "Email", href: "mailto:contact@lartiska.com", icon: Mail },
+  { label: "Email", href: "mailto:Lartiska2@gmail.com", icon: Mail },
   { label: "WhatsApp", href: "https://wa.me/221785446363", icon: WhatsAppIcon },
   { label: "Instagram", href: "https://instagram.com/lartiska", icon: Instagram },
   { label: "Facebook", href: "https://facebook.com/lartiska", icon: Facebook },
@@ -25,7 +25,7 @@ const socials = [
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const email = "contact@lartiska.com";
+  const email = "Lartiska2@gmail.com";
 
   return (
     <section id="contact" ref={ref} className="bg-bg pt-28 md:pt-40 pb-16 md:pb-20 px-6 overflow-hidden relative">

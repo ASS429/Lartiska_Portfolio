@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Mail, FileText, ArrowRight, Globe } from "lucide-react";
 import LoadingScreen from "@/components/LoadingScreen";
 import AboutSection from "@/components/AboutSection";
@@ -112,17 +113,24 @@ const Index = () => {
 
               <div className="w-px h-5 bg-stroke mx-2 hidden sm:block" />
 
-              {NAV_LINKS.map((link) => (
-                <a key={link.label} href={link.href} onClick={() => setActiveNav(link.label)}
-                  className={"text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-colors duration-200 " +
-                    (activeNav === link.label ? "text-white bg-stroke/50" : "text-muted hover:text-white hover:bg-stroke/50")}>
-                  {link.label}
-                </a>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const className = "text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-colors duration-200 " +
+                  (activeNav === link.label ? "text-white bg-stroke/50" : "text-muted hover:text-white hover:bg-stroke/50");
+                const isRoute = link.href.startsWith("/");
+                return isRoute ? (
+                  <Link key={link.label} to={link.href} onClick={() => setActiveNav(link.label)} className={className}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a key={link.label} href={link.href} onClick={() => setActiveNav(link.label)} className={className}>
+                    {link.label}
+                  </a>
+                );
+              })}
 
               <div className="w-px h-5 bg-stroke mx-2 hidden sm:block" />
 
-              <a href="mailto:contact@lartiska.com" className="relative group rounded-full text-xs sm:text-sm overflow-hidden">
+              <a href="mailto:Lartiska2@gmail.com" className="relative group rounded-full text-xs sm:text-sm overflow-hidden">
                 <span className="absolute inset-[-2px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(90deg, #89AACC, #4E85BF)" }} aria-hidden />
                 <span className="relative z-10 flex items-center gap-1 bg-surface rounded-full px-3 py-1.5 text-white">
                   Dire bonjour ↗
@@ -169,7 +177,7 @@ const Index = () => {
             </div>
 
             <div className="blur-in flex items-center gap-3 mt-2" style={{ opacity: 0 }}>
-              <a href="mailto:contact@lartiska.com" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="Email"><Mail size={16} /></a>
+              <a href="mailto:Lartiska2@gmail.com" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="Email"><Mail size={16} /></a>
               <a href="https://wa.me/221785446363" target="_blank" rel="noopener noreferrer" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="WhatsApp"><WhatsAppIcon size={16} /></a>
               <a href="#about" className="liquid-glass rounded-full p-3 text-white/60 hover:text-white transition-colors" aria-label="À propos"><Globe size={16} /></a>
             </div>
