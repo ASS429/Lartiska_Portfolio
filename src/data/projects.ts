@@ -1,4 +1,4 @@
-export type CategorySlug = "peinture-fresques" | "plafonnage" | "carrelage" | "decoration";
+export type CategorySlug = "peinture-fresques" | "plafonnage" | "carrelage" | "decoration" | "epoxy";
 
 export interface Category {
   slug: CategorySlug;
@@ -25,10 +25,25 @@ export const categories: Category[] = [
   { slug: "peinture-fresques", name: "Peinture & Fresques" },
   { slug: "plafonnage", name: "Plafonnage" },
   { slug: "carrelage", name: "Carrelage & Mosaïque" },
+  { slug: "epoxy", name: "Époxy & Sol" },
   { slug: "decoration", name: "Décoration complète" },
 ];
 
 const rawProjects: Project[] = [
+  {
+    slug: "sol-epoxy-resine-decoratif",
+    title: "Sol époxy résine — Finition décorative",
+    category: "epoxy",
+    city: "Dakar",
+    folder: "Epoxy",
+    description:
+      "Coulée d'un sol en résine époxy haute brillance avec effets décoratifs sur-mesure. Surface lisse, durable et facile d'entretien, idéale pour résidences contemporaines, boutiques et espaces professionnels qui veulent un sol design qui ne ressemble à aucun autre.",
+    materials: "Résine époxy haute brillance, pigments décoratifs",
+    duration: "1 à 2 semaines",
+    completed_at: "2025",
+    featured: true,
+    imageCount: 6,
+  },
   {
     slug: "residence-auteur-almadies",
     title: "Résidence d'auteur — Almadies",
