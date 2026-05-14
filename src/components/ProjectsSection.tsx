@@ -28,7 +28,7 @@ const ProjectsSection = () => {
             <br />à travers l'Afrique de l'Ouest.
           </h2>
           <p className="mt-6 text-white/85 text-base md:text-lg leading-relaxed font-medium">
-            Sélection de réalisations LARTISKA — fresques, plafonds, mosaïques, design d'intérieur.
+            Sélection de réalisations LARTISKA — fresques, plafonds, mosaïques, sols en résine époxy, design d'intérieur.
             Cliquez sur un projet pour découvrir la galerie complète.
           </p>
         </motion.header>

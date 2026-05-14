@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Palette, Brush, Hammer, Sparkles, Share2, Rocket } from "lucide-react";
+import { Palette, Brush, Hammer, Sparkles, Share2, Rocket, Droplets } from "lucide-react";
 
 const skills = [
   {
@@ -13,6 +13,12 @@ const skills = [
     icon: Hammer, tag: "Aménagement", title: "Carrelage & Plafonnage",
     description: "Je réalise des travaux de carrelage et de plafonnage modernes avec une attention particulière portée à la précision, à l'esthétique et à la qualité des finitions.",
     tags: ["Carrelage design", "Pose moderne", "Plafonnage esthétique", "Finitions professionnelles", "Aménagement intérieur", "Rénovation d'espaces"],
+    wide: false,
+  },
+  {
+    icon: Droplets, tag: "Sols", title: "Époxy & Revêtements de sol",
+    description: "Je conçois et pose des sols en résine époxy haut de gamme — finitions miroir, effets métalliques, motifs sur-mesure. Une surface durable, lavable et résolument moderne pour résidences, boutiques et espaces professionnels.",
+    tags: ["Résine époxy", "Sol coulé", "Finition miroir", "Effets métalliques", "Sols industriels", "Revêtements décoratifs"],
     wide: false,
   },
   {

@@ -170,9 +170,10 @@ const Index = () => {
               {" "}basé à Dakar, Sénégal.
             </p>
 
-            <p className="blur-in text-sm md:text-base text-white/75 font-medium max-w-md" style={{ opacity: 0 }}>
+            <p className="blur-in text-sm md:text-base text-white/75 font-medium max-w-lg" style={{ opacity: 0 }}>
               Fondateur de LARTISKA. Je transforme les espaces en œuvres d'art à travers
-              la peinture décorative, le carrelage design et le plafonnage moderne.
+              la peinture décorative, le carrelage design, le plafonnage moderne et les
+              revêtements de sol époxy résine.
             </p>
 
             <div className="blur-in inline-flex gap-4 flex-wrap justify-center" style={{ opacity: 0 }}>

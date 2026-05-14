@@ -35,7 +35,8 @@ const AboutSection = () => {
             Artiste peintre sénégalais et fondateur de{" "}
             <span className="font-serif-i italic text-white">LARTISKA</span>, une entreprise
             spécialisée dans la peinture décorative, les décorations murales artistiques, le
-            carrelage design et le plafonnage moderne. Passionné par l'art, les couleurs et
+            carrelage design, le plafonnage moderne et les revêtements de sol en époxy résine.
+            Passionné par l'art, les couleurs et
             l'esthétique, je mets ma créativité et mon savoir-faire au service de la transformation
             des espaces afin de créer des environnements élégants, originaux et inspirants.
             J'accompagne particuliers, entreprises et professionnels dans des projets décoratifs

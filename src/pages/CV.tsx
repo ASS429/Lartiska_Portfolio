@@ -535,7 +535,7 @@ const CV = () => {
             <div className="cv-section">
               <div className="cv-section-title">Profil</div>
               <p className="cv-text">
-                Artiste peintre sénégalais et fondateur de LARTISKA, spécialisée dans la peinture décorative, les créations murales artistiques, le carrelage design et le plafonnage moderne. Passionné par l'art, les couleurs et l'innovation visuelle, je transforme les espaces en véritables œuvres d'art à travers des concepts modernes, élégants et uniques. Créatif et ambitieux, j'accompagne particuliers, entreprises et professionnels dans la réalisation de projets décoratifs alliant esthétique, qualité et originalité.
+                Artiste peintre sénégalais et fondateur de LARTISKA, spécialisée dans la peinture décorative, les créations murales artistiques, le carrelage design, le plafonnage moderne et les revêtements de sol en résine époxy. Passionné par l'art, les couleurs et l'innovation visuelle, je transforme les espaces en véritables œuvres d'art à travers des concepts modernes, élégants et uniques. Créatif et ambitieux, j'accompagne particuliers, entreprises et professionnels dans la réalisation de projets décoratifs alliant esthétique, qualité et originalité.
               </p>
             </div>
 
@@ -554,13 +554,14 @@ const CV = () => {
                 </div>
 
                 <div className="cv-skill-block">
-                  <div className="cv-skill-title">Aménagement &amp; Travaux</div>
+                  <div className="cv-skill-title">Aménagement &amp; Sols</div>
                   <div className="cv-tags">
                     <span className="cv-tag">Carrelage design</span>
                     <span className="cv-tag">Plafonnage moderne</span>
-                    <span className="cv-tag">Pose &amp; finitions</span>
+                    <span className="cv-tag">Résine époxy</span>
+                    <span className="cv-tag">Sol coulé &amp; finition miroir</span>
+                    <span className="cv-tag">Effets métalliques</span>
                     <span className="cv-tag">Rénovation d'espaces</span>
-                    <span className="cv-tag">Aménagement intérieur</span>
                   </div>
                 </div>
 
@@ -597,7 +598,7 @@ const CV = () => {
                   <span className="cv-project-type">Fondateur</span>
                 </div>
                 <p className="cv-project-desc">
-                  Décoration murale artistique, peinture moderne, carrelage design et plafonnage esthétique. Accompagnement des clients dans la transformation de leurs espaces à travers des créations uniques et élégantes.
+                  Décoration murale artistique, peinture moderne, carrelage design, plafonnage esthétique et revêtements de sol en résine époxy. Accompagnement des clients dans la transformation de leurs espaces à travers des créations uniques et élégantes.
                 </p>
               </div>
 
